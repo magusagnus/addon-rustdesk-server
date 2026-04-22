@@ -12,7 +12,7 @@ Este add-on permite que você execute seu próprio servidor de sinalização e r
 
 Para adicionar este repositório ao seu Home Assistant, clique no botão abaixo:
 
-[![Adicionar repositório ao Home Assistant][add-repo-badge]](https://my.home-assistant.io/redirect/supervisor_add_repo/?repository_url=https%3A%2F%2Fgithub.com%2Fmagusagnus%2Faddon-rustdesk-server)
+[![Adicionar repositório ao Home Assistant][add-repo-badge]](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A//github.com/magusagnus/addon-rustdesk-server)
 
 Ou adicione manualmente a URL:
 `https://github.com/magusagnus/addon-rustdesk-server`
@@ -55,4 +55,4 @@ Certifique-se de que as seguintes portas estejam acessíveis (e redirecionadas n
 [license-shield]: https://img.shields.io/github/license/magusagnus/addon-rustdesk-server?style=for-the-badge
 [license]: LICENSE
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg?style=for-the-badge
-[add-repo-badge]: https://my.home-assistant.io/badges/supervisor_add_repo.svg
+[add-repo-badge]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
