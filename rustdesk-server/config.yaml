@@ -1,11 +1,11 @@
 ---
 name: Rustdesk-Server
 url: https://github.com/magusagnus/addon-rustdesk-server
-version: dev
+version: 1.1.15-magus
 slug: rustdesk-server
 arch:
   - amd64
-description: Rustdesk-Server pour HomeAssistant
+description: Aplicação Rustdesk para  Home Assistant
 init: false
 map:
   - type: addon_config
