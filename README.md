@@ -1,75 +1,58 @@
-# Home Assistant App: RustDesk-Server
+# Home Assistant Add-on: RustDesk Server
 
-[![GitHub Release][releases-shield]][releases]
-[![License][license-shield]](LICENSE)
+[![Relançamentos do GitHub][releases-shield]][releases]
+[![Licença][license-shield]][license]
+![Arquitetura Suportada][amd64-shield]
 
-![Supports aarch64 Architecture][aarch64-shield]
+Este add-on permite que você execute seu próprio servidor de sinalização e revezamento (hbbs/hbbr) para o **RustDesk** diretamente no seu Home Assistant.
 
-[RustDesk-Server][rustdesk-server] permet de partager des fichiers avec d'autres de manière
-simple.
+[RustDesk](https://rustdesk.com/) é uma alternativa de desktop remoto de código aberto, que permite que você mantenha total controle sobre seus dados e segurança, sem depender de servidores de terceiros.
 
-[![Open your Home Assistant instance and show the add app repository dialog
-with a specific repository URL pre-filled.][add-repo-shield]][add-repo]
-[![Open your Home Assistant instance and show the dashboard of a Supervisor app.][add-app-shield]][add-app]
+## 🚀 Instalação Rápida
 
-## About
+Para adicionar este repositório ao seu Home Assistant, clique no botão abaixo:
 
-Cet app vous permet d'auto-hébergez votre propre serveur RustDesk
-sur votre HomeAssistant sur RaspBerry Pi 4.
-Si vous utilisez RustDesk, vous devriez avoir votre propre server RustDesk.
-Les serveurs publics Rustdesk sont destinés à des fins de test et de recherche
-et ne sont pas équipés pour gérer de grandes quantités de trafic.
-Cela signifie que le temps nécessaire pour établir une connexion
-via les serveurs publics peut varier considérablement et parfois même échouer
-si le serveur est surchargé.
-De plus, si la perforation échoue un jour et que la connexion est acheminée
-via le serveur relais public... certains jours elle peut être
-extrêmement rapide... d'autres moins.
+[![Adicionar repositório ao Home Assistant][add-repo-badge]](https://my.home-assistant.io/redirect/supervisor_add_repo/?repository_url=https%3A%2F%2Fgithub.com%2Fmagusagnus%2Faddon-rustdesk-server)
 
-## Support
+Ou adicione manualmente a URL:
+`https://github.com/magusagnus/addon-rustdesk-server`
 
-Je ne suis pas dévellopeur, n'ai aucune formation de code, je suis simplement
-autodidact.
-Si vous avez une question concernant HA et ses apps vous pouvez consulter:
+---
 
-- [Le Forum communautaire francophone][hacf] de HomeAssistant
-- [Le Forum communautaire anglophone][forum] de HomeAssistant.
-- [Le serveur Discord][discord-ha] de HomeAssistant.
+## 🔥 Sobre este Fork
+Este projeto é um **fork** baseado no excelente trabalho original. Foram realizadas melhorias técnicas para garantir a estabilidade no Supervisor atual, incluindo:
 
-## License
+- 🛠 **Correção de Build**: Ajuste no gerenciador de pacotes para evitar falhas de versão do `unzip`.
+- 🏗 **Otimização amd64**: Configurado especificamente para arquiteturas 64 bits.
+- ⚡ **Atualização**: Baseado na versão estável 1.1.15 do RustDesk Server.
 
-MIT License
+### 🙏 Agradecimentos
+Um agradecimento especial ao autor original do repositório (Frosh) por fornecer a base sólida que permitiu a criação deste add-on. Projetos de código aberto crescem através da colaboração e do compartilhamento!
 
-Copyright (c) 2026 [Frosh][Frosh]
+---
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## ⚙️ Configuração do Cliente
+Após instalar o add-on, você deve configurar o seu cliente RustDesk (PC ou Celular):
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Vá em **Configurações > Rede**.
+2. No campo **Servidor de ID**, coloque o IP do seu Home Assistant.
+3. Se você definiu uma chave nas opções do add-on, coloque-a no campo **Chave**.
+4. Verifique se o status na parte inferior do cliente mudou para **"Pronto"**.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## 🛡️ Portas Utilizadas
+Certifique-se de que as seguintes portas estejam acessíveis (e redirecionadas no seu roteador se precisar de acesso externo):
+- `21115` (TCP)
+- `21116` (TCP/UDP)
+- `21117` (TCP)
+- `21118` (TCP)
+- `21119` (TCP)
 
-[add-app]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=c751e21a_rustdesk-server
-[add-app-shield]: https://my.home-assistant.io/badges/supervisor_addon.svg
-[add-repo]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A//github.com/casse-boubou/hassio-addons
-[add-repo-shield]: https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg
-[releases]: https://github.com/casse-boubou/addon-rustdesk-server/releases
-[releases-shield]: https://img.shields.io/github/v/release/casse-boubou/addon-rustdesk-server
-[license-shield]: https://img.shields.io/github/license/casse-boubou/addon-rustdesk-server
-[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
-[rustdesk-server]: https://github.com/rustdesk/rustdesk-server
-[discord-ha]: https://discord.gg/c5DvZ4e
-[forum]: https://community.home-assistant.io
-[hacf]: https://forum.hacf.fr/
-[Frosh]: https://github.com/casse-boubou
+---
+**Mantido por:** [magusagnus](https://github.com/magusagnus)
+
+[releases-shield]: https://img.shields.io/github/v/release/magusagnus/addon-rustdesk-server?style=for-the-badge
+[releases]: https://github.com/magusagnus/addon-rustdesk-server/releases
+[license-shield]: https://img.shields.io/github/license/magusagnus/addon-rustdesk-server?style=for-the-badge
+[license]: LICENSE
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg?style=for-the-badge
+[add-repo-badge]: https://my.home-assistant.io/badges/supervisor_add_repo.svg
