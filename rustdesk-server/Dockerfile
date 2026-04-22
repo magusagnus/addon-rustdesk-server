@@ -15,7 +15,7 @@ RUN set -eux \
         unzip=6.0-r15 \
         ; \
     mkdir -p /opt; \
-    if [ "${BUILD_ARCH}" = "aarch64" ]; then ARCH="arm64v8"; \
+    if [ "${BUILD_ARCH}" = "amd64" ]; then ARCH="amd64"; \
     fi; \
     curl -S -J -L -o /tmp/rustdesk-server.zip \
         "https://github.com/rustdesk/rustdesk-server/releases/download/${RUSTDESK_SERVER_VERSION}/rustdesk-server-linux-${ARCH}.zip"; \
@@ -43,13 +43,13 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Frosh" \
+    maintainer="Magus" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Frosh Home Assistant App" \
-    org.opencontainers.image.authors="Frosh" \
+    org.opencontainers.image.vendor="Magus Home Assistant App" \
+    org.opencontainers.image.authors="Magus" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/casse-boubou/hassio-addons" \
+    org.opencontainers.image.url="https://github.com/magusagnus/hassio-addons" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
