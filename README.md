@@ -51,7 +51,7 @@ Certifique-se de que as seguintes portas estejam acessíveis (e redirecionadas n
 **Mantido por:** [magusagnus](https://github.com/magusagnus)
 
 [releases-shield]: https://img.shields.io/github/v/release/magusagnus/addon-rustdesk-server?style=for-the-badge
-[releases]: https://github.com/magusagnus/addon-rustdesk-server/releases
+[releases]: https://github.com/magusagnus/addon-rustdesk-server/releases/tag/v.1.1.15-magus
 [license-shield]: https://img.shields.io/github/license/magusagnus/addon-rustdesk-server?style=for-the-badge
 [license]: LICENSE
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg?style=for-the-badge
